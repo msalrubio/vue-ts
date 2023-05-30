@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/vue';
-import HelloWorld from '../components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 describe('Hello world', () => {
   test('Renders props.msg when passed', () => {
