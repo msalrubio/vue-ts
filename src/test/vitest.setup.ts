@@ -1,11 +1,11 @@
 import { expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/vue';
 import matchers from '@testing-library/jest-dom/matchers';
+import * as matchersAxe from 'vitest-axe/matchers';
 
-// extends Vitest's expect method with methods from vue-testing-library
 expect.extend(matchers);
+expect.extend(matchersAxe);
 
-// runs a cleanup after each test case (e.g. clearing jsdom)
 afterEach(() => {
   cleanup();
 });

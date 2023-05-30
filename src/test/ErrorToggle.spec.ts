@@ -1,3 +1,4 @@
+import { axe } from 'vitest-axe';
 import { describe, expect, test } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/vue';
 import ErrorToggle from '@/components/ErrorToggle.vue';
@@ -16,5 +17,12 @@ describe('Error Toggle', () => {
     await fireEvent.click(button);
 
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  });
+
+  test('should be accesible', async () => {
+    const { container } = render(ErrorToggle);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 });
