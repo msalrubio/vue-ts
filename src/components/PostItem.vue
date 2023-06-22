@@ -8,7 +8,7 @@
 <template>
   <article class="card">
     <article>
-      <a href="" :aria-label="props.post.title">
+      <a href="#" :aria-label="props.post.title">
         <img class="card-img" src="https://via.placeholder.com/150/24f355" />
         <div class="card-info">
           <h3>{{ props.post.title }}</h3>
@@ -37,9 +37,6 @@
   .card:focus {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(-0.5rem);
-  }
-  .card:focus {
-    outline: 5px solid var(--primary-color);
   }
   .card-img {
     width: 100%;
