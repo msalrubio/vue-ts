@@ -7,17 +7,15 @@
 
 <template>
   <article class="card">
-    <article>
-      <a href="#" :aria-label="props.post.title">
-        <img class="card-img" src="https://via.placeholder.com/150/24f355" />
-        <div class="card-info">
-          <h3>{{ props.post.title }}</h3>
-          <p class="card-lead">
-            {{ props.post.body }}
-          </p>
-        </div>
-      </a>
-    </article>
+    <a href="#" :aria-label="props.post.title">
+      <img class="card-img" src="https://via.placeholder.com/150/24f355" />
+      <div class="card-info">
+        <h3>{{ props.post.title }}</h3>
+        <p class="card-lead">
+          {{ props.post.body }}
+        </p>
+      </div>
+    </a>
   </article>
 </template>
 
